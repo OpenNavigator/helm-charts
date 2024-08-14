@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  opennavigator:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-08-14T03:31:44.584273608Z"
+    description: A Helm chart for Kubernetes
+    digest: 0d5dd956d0cc6399cf753cb19e478f0cd2680329ff12d4531819dda191e18919
+    name: opennavigator
+    type: application
+    urls:
+    - https://github.com/OpenNavigator/helm-charts/releases/download/opennavigator-0.0.1/opennavigator-0.0.1.tgz
+    version: 0.0.1
+generated: "2024-08-14T03:31:44.584284398Z"
