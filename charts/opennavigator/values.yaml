@@ -7,15 +7,15 @@ replicaCount: 1
 image:
   registry: ghcr.io
   repository: openinsight-proj/opennavigator
-  tag: 7994398e0385b5f19520baf60dbfba3f125fdb12
+  tag: 88df54167a84406dee22e58af83895ecfde0804d
   pullPolicy: IfNotPresent
 
 config: |
-  manager:
+  managerNetwork:
     host: 0.0.0.0
     port: 4200
     tlsSkipVerify: true
-  server:
+  serverNetwork:
     host: 0.0.0.0
     port: 4320
     tlsSkipVerify: true
