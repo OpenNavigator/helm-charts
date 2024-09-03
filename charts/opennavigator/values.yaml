@@ -77,6 +77,7 @@ tolerations: []
 affinity: {}
 
 mysql:
+  enabled: true
   image:
     registry: docker.m.daocloud.io
     repository: mysql
