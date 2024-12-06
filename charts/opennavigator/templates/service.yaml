@@ -7,13 +7,13 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - name: http-server
-      targetPort: http-server
+    - name: opampserver
+      targetPort: opampserver
       protocol: TCP
-      port: {{ .Values.service.serverPort }}
-    - name: http-manager
-      targetPort: http-manager
+      port: {{ .Values.service.opAMPServerPort }}
+    - name: apiserver
+      targetPort: apiserver
       protocol: TCP
-      port: {{ .Values.service.managerPort }}
+      port: {{ .Values.service.apiServerPort }}
   selector:
     {{- include "opennavigator.selectorLabels" . | nindent 4 }}
