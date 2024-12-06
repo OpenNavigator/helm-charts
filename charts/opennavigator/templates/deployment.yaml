@@ -33,16 +33,16 @@ spec:
           command:
             - /bin/opennavigator
           args:
-            - server
+            - all-in-one
             - '--config'
             - /etc/config.yaml
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: http-server
-              containerPort: {{ .Values.service.serverPort }}
+            - name: opampserver
+              containerPort: {{ .Values.service.opAMPServerPort }}
               protocol: TCP
-            - name: http-manager
-              containerPort: {{ .Values.service.managerPort }}
+            - name: apiserver
+              containerPort: {{ .Values.service.apiServerPort }}
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}

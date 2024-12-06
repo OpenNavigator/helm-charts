@@ -7,39 +7,25 @@ replicaCount: 1
 image:
   registry: ghcr.io
   repository: openinsight-proj/opennavigator
-  tag: 88df54167a84406dee22e58af83895ecfde0804d
+  tag: 377008eae688dfa6221bb6c24b1b43127f42f9f6
   pullPolicy: IfNotPresent
 
 config: |
-  managerNetwork:
-    host: 0.0.0.0
-    port: 4200
-    tlsSkipVerify: true
-  serverNetwork:
-    host: 0.0.0.0
-    port: 4320
-    tlsSkipVerify: true
-  store:
-    fixture:
-      path: "fixtures"
+  opAMPServer:
+    network:
+      host: 0.0.0.0
+      port: 4320
+  apiServer:
+    network:
+      host: 0.0.0.0
+      port: 4200
+  storage:
     type: mysql
     dsn: root:root@tcp({{ .Release.Name }}-mysql:3306)/opennavigator?charset=utf8mb4&parseTime=True&loc=Local&multiStatements=true
-  logging:
-    level: debug
-    filePath: ""
-    output: stdout
-  tracing:
-    type: ""
-    samplingRate: 100
-    otlp:
-      endpoint: ""
-      insecure: true
-  metrics:
-    type: ""
-    interval:
-    otlp:
-      endpoint: ""
-      insecure: true
+  telemetry:
+    logging:
+      level: info
+      output: stdout
 
 imagePullSecrets: []
 nameOverride: ""
@@ -59,8 +45,8 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  serverPort: 4320
-  managerPort: 4200
+  apiServerPort: 4200
+  opAMPServerPort: 4320
 
 resources:
    limits:
