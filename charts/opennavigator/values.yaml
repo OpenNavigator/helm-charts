@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   registry: ghcr.io
   repository: openinsight-proj/opennavigator
-  tag: 377008eae688dfa6221bb6c24b1b43127f42f9f6
+  tag: b7de005a5789d5d06c0ddb003f9bbc8892c3679c
   pullPolicy: IfNotPresent
 
 config: |
@@ -15,10 +15,18 @@ config: |
     network:
       host: 0.0.0.0
       port: 4320
+      tlsSkipVerify: false
+      tlsCert: /config/testdata/server_certs/server.cert.pem
+      tlsKey: /config/testdata/server_certs/server.key.pem
+      tlsCa: /config/testdata/certs/ca.cert.pem
   apiServer:
     network:
       host: 0.0.0.0
       port: 4200
+      tlsSkipVerify: false
+      tlsCert: /config/testdata/server_certs/server.cert.pem
+      tlsKey: /config/testdata/server_certs/server.key.pem
+      tlsCa: /config/testdata/certs/ca.cert.pem
   storage:
     type: mysql
     dsn: root:root@tcp({{ .Release.Name }}-mysql:3306)/opennavigator?charset=utf8mb4&parseTime=True&loc=Local&multiStatements=true
