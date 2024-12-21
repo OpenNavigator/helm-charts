@@ -3,6 +3,16 @@ entries:
   opennavigator:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2024-12-21T13:26:34.736338993Z"
+    description: A Helm chart for Kubernetes
+    digest: 8d117750ab138ce7ac53a72b4855f995c29a55dbaf01dd64511592dc7a0d1731
+    name: opennavigator
+    type: application
+    urls:
+    - https://github.com/OpenNavigator/helm-charts/releases/download/opennavigator-0.0.6/opennavigator-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2024-09-03T12:26:19.788020067Z"
     description: A Helm chart for Kubernetes
     digest: b80e45812c44f9e2182b638ce91adcc8f0c1708d8e906494d1f7e8d37ba41723
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://github.com/OpenNavigator/helm-charts/releases/download/opennavigator-0.0.1/opennavigator-0.0.1.tgz
     version: 0.0.1
-generated: "2024-09-03T12:26:19.788036517Z"
+generated: "2024-12-21T13:26:34.736353941Z"
