@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   registry: ghcr.io
   repository: openinsight-proj/opennavigator
-  tag: b7de005a5789d5d06c0ddb003f9bbc8892c3679c
+  tag: 0a87e156be61633460089459fad4a0d99c86c8bc
   pullPolicy: IfNotPresent
 
 config: |
